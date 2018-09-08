@@ -1,0 +1,5 @@
+<% if @response_code.present? %>
+  $('#result').html('<div class="panel panel-info"><div class="panel-heading">Result</div><div class="panel-body">Response code: <%= @response_code %></div></div>');
+<% else %>
+  $('#result').html('<div class="panel panel-danger"><div class="panel-heading">Error</div><div class="panel-body">No ASIN provided, please enter an ASIN.</div></div>');
+<% end %>
