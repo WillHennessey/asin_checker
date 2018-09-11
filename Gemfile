@@ -42,8 +42,6 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'shoulda'
-  gem 'vcr'
-  gem 'webmock'
 end
 
 group :development do

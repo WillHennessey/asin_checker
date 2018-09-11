@@ -1,12 +1,6 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-require 'vcr'
-
-VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/vcr_cassettes'
-  config.hook_into :webmock
-end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
