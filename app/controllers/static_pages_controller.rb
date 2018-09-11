@@ -15,6 +15,7 @@ class StaticPagesController < ApplicationController
     if params[:asin].present?
       asin = params[:asin]
       @errors << 'ASIN must only contain letters and numbers.' unless asin =~ /^[a-zA-Z0-9]+$/
+      @errors << 'ASIN must be exactly 10 characters in length.' unless asin.length == 10
     else
       @errors << 'No ASIN provided, please provide an ASIN in the field above.'
     end
