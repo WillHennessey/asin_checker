@@ -1,7 +1,7 @@
 <% if @response_code.present? && @response_code == 200 %>
-  $('#result').html('<div class="panel panel-info"><div class="panel-heading">Result</div><div class="panel-body">Success: ASIN is valid</div></div>');
+  $('#result').html('<div class="panel panel-info"><div class="panel-heading">Result</div><div class="panel-body">Success: ASIN is valid<br/>HTTP status code: <%= @response_code %></div></div>');
 <% elsif @response_code.present? && @response_code != 200 %>
-  $('#result').html('<div class="panel panel-info"><div class="panel-heading">Result</div><div class="panel-body">Not found: ASIN is not valid</div></div>');
+  $('#result').html('<div class="panel panel-info"><div class="panel-heading">Result</div><div class="panel-body">Not found: ASIN is not valid<br/>HTTP status code: <%= @response_code %></div></div>');
 <% else %>
   var error_string = "<%= @errors.join('<br/>') %>";
   $('#result').html('<div class="panel panel-danger"><div class="panel-heading">Error</div><div class="panel-body">' + error_string + '</div></div>');
