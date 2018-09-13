@@ -1,3 +1,5 @@
+require 'net/http'
+require 'net/https'
 class Asin
   AMAZON_BASE_URL = 'https://amazon.com/dp/'
   AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36'
