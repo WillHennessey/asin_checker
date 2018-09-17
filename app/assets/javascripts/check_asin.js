@@ -5,7 +5,7 @@ $.ajaxSetup({
 });
 
 $(document).ready(function(){
-    $("button").click(function(){
+    $('#submitButton').click(function(){
         var asin = $("#asinInput").val();
         $.post("/check_asin", { asin: asin, format: 'js' });
     });
@@ -16,5 +16,11 @@ $(document).ready(function(){
             $.post("/check_asin", { asin: asin, format: 'js' });
             return false;
         }
+    });
+
+    $('#resetButton').click(function() {
+        console.log('here');
+       $('#asinInput').val('');
+       $('.result-row').hide();
     });
 });
